@@ -1,130 +1,142 @@
-🚌 Bus Booking Backend Application
-📌 Overview
-This is a Bus Booking Backend System built using Spring Boot + MySQL.
-It provides REST APIs to manage users, buses, routes, seats, bookings, and payments.
+# Bus Booking Application
 
-The system follows a layered architecture:
+A comprehensive Bus Booking Application that allows users to search buses, view seat availability, and book tickets with secure, intuitive features. This application aims to provide a reliable and user-friendly platform for online bus reservations.
 
-Controller → Service → Repository → Database
-🚀 Features
-👤 User Module
-Register user (unique email)
+---
 
-Login (plain password check)
+## 1. Project Overview
 
-View users
+The Bus Booking Application is designed to streamline and simplify bus ticket reservations. Users can search available buses for a specific route and date, view seats, and book tickets securely while administrators can manage buses, routes, and bookings through a well-structured backend.
 
-🚌 Bus Module
-Add bus
+---
 
-View all buses
+## 2. Functional Requirements
 
-📍 Route Module
-Add route
+- **Bus Search**: Search for buses based on source, destination, and travel date.
+- **Bus and Seat Details**: View detailed information about buses and real-time seat availability.
+- **Booking & Cancellation**: Book and cancel bus tickets easily.
+- **Booking Confirmation**: Display booking confirmation details and upcoming travel itinerary.
 
-View routes
+---
 
-💺 Seat Module
-View seats by bus
+## 3. User Management & Security
 
-🎟️ Booking Module
-Book ticket
+- **User Accounts**: Register, login, and manage user profiles.
+- **Authentication/Authorization**: Secure mechanisms to ensure only authenticated users can book or view tickets.
+- **Data Security**: Protect sensitive user and booking information using secure APIs and best practices.
 
-Cancel booking
+---
 
-💳 Payment Module
-Make payment
+## 4. Exception Handling
 
-🏗️ Tech Stack
-Backend: Spring Boot
+- **Centralized Exception Logic**: Robust global exception handling for all back-end operations.
+- **Input Validation**: Handling invalid data, booking failures, and providing meaningful error messages.
 
-Database: MySQL
+---
 
-ORM: JPA / Hibernate
+## 5. Logging
 
-Build Tool: Maven
+- **User Action Logs**: Record significant user actions for audit purposes.
+- **Error Logs**: Log all errors and exceptions for easier debugging and maintenance.
+- **API Logging**: Log incoming API requests and associated responses.
 
-Testing Tool: Postman
+---
 
-Lombok: Reduces boilerplate
+## 6. Database Connectivity
 
-📂 Project Structure
-controller/   → API layer
-service/      → Business logic
-repository/   → Database access
-entity/       → Database mapping
-dto/          → Request/Response objects
-enums/        → Constant values
-exception/    → Global error handling
-security/     → JWT (basic)
-🗄️ Database Tables
-users
-buses
-routes
-seats
-bookings
-booking_seats
-payments
-🔄 Backend Flow
-Client (Postman)
-   ↓
-Controller
-   ↓
-Service
-   ↓
-Repository
-   ↓
-MySQL Database
-🔐 Roles
-USER
+- **Relational Database**: Store details about buses, routes, seats, users, and bookings.
+- **Normalization**: Efficient schema design to ensure performance and maintainability.
+- **Secure Configuration**: Follow security best practices for database access.
 
-Register/Login
+---
 
-Book tickets
+## 7. UI Design
 
-Make payments
+- **User-Friendly Interface**: Simple, intuitive, and clean UIs for customers and administrators.
+- **Responsive Layout**: Works seamlessly on desktops, tablets, and mobiles.
+- **Seat Selection**: Visual seat map for easy selection and confirmation.
 
-ADMIN
+---
 
-Add buses
+## 8. API Development
 
-Add routes
+- **RESTful APIs**: Modular APIs for search, booking, and management operations.
+- **Separation of Concerns**: Clean, maintainable service architecture.
+- **Reusable Components**: Promote code reuse and clarity.
 
-📡 API Endpoints
-🔐 Auth
-POST /api/auth/register
-POST /api/auth/login
-👤 Users
-GET /api/users
-GET /api/users/{id}
-🚌 Bus
-POST /api/buses
-GET  /api/buses
-📍 Route
-POST /api/routes
-GET  /api/routes
-💺 Seat
-GET /api/seats/{busId}
-🎟️ Booking
-POST   /api/bookings/book
-DELETE /api/bookings/cancel/{id}
-💳 Payment
-POST /api/payments/pay
-⚙️ Setup Instructions
-1️⃣ Clone Project
-git clone <repo-url>
-2️⃣ Configure Database
-spring.datasource.url=jdbc:mysql://localhost:3306/bus_booking
-spring.datasource.username=root
-spring.datasource.password=root
-3️⃣ Create Database
-CREATE DATABASE bus_booking;
-4️⃣ Run Application
-mvn spring-boot:run
-OR run main class:
+---
 
-BusBookingApplication.java
-5️⃣ Test APIs
-Use Postman:
+## 9. Email Notification
 
-http://localhost:8080/api/...
+- **Onboarding**: Send confirmation emails during user registration.
+- **Booking**: Notify users with ticket booking confirmation and details.
+- **Cancellations**: Send notifications upon ticket cancellation.
+
+---
+
+## 10. Source Code Management
+
+- **Git Version Control**: All code changes tracked and managed via Git.
+- **Team Collaboration**: Individual team members contribute via feature branches and commits.
+- **README**: This file provides clear setup and run instructions.
+
+---
+
+## 11. Setup and Run Instructions
+
+### Prerequisites
+- Node.js / Java / Python (update based on your stack)
+- Database (MySQL / PostgreSQL / MongoDB)
+- Git
+
+### Steps
+
+1. **Clone the Repository**
+    ```sh
+    git clone https://github.com/swathi1004/bus-management-system.git
+    cd bus-management-system
+    ```
+
+2. **Install Dependencies**
+    ```sh
+    # e.g., for Node.js projects
+    npm install
+    ```
+
+3. **Database Setup**
+    - Import the provided schema from the `database/schema.sql` (replace with your actual path).
+    - Configure database connection in the app (`.env` or `config` file).
+
+4. **Run the Application**
+    ```sh
+    # e.g., for Node.js
+    npm start
+    ```
+
+5. **Access the Application**
+    - Open your browser at `http://localhost:PORT` (default port specified in config).
+
+---
+
+## 12. Deliverables
+
+- Fully Functional Bus Booking Application
+- Complete Source Code Repository
+- Database Schema (`database/schema.sql`)
+- Setup and Deployment Instructions (this README)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) (update if using a different license).
+
+---
+
+## Contributors
+
+- [Your Name](https://github.com/swathi1004) and team
+
+---
+
+Feel free to update the stack-specific instructions (Node.js/Java/Python/etc.) and other project-specific details.
