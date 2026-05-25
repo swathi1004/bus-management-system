@@ -125,18 +125,4 @@ The Bus Booking Application is designed to streamline and simplify bus ticket re
 - Database Schema (`database/schema.sql`)
 - Setup and Deployment Instructions (this README)
 
----
 
-## License
-
-This project is licensed under the [MIT License](LICENSE) (update if using a different license).
-
----
-
-## Contributors
-
-- [Your Name](https://github.com/swathi1004) and team
-
----
-
-Feel free to update the stack-specific instructions (Node.js/Java/Python/etc.) and other project-specific details.
